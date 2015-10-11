@@ -90,7 +90,7 @@ def extractTweets(lst):
 #                tweetlst.extend(new_tweets)
 #                oldest = tweetlst[-1].id - 1
                 
-            outtweets = [[lst[i].screen_name,tweet.created_at,tweet.retweet_count,tweet.favorite_count, tweet.text.encode('utf8')] for tweet in tweetlst]
+            outtweets = [[lst[i],tweet.created_at,tweet.retweet_count,tweet.favorite_count, tweet.text.encode('utf8')] for tweet in tweetlst]
             		
             with open('%s_tweets.csv' % lst[i], 'w',newline="") as f:
                 writer = csv.writer(f)
