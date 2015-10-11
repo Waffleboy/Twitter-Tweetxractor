@@ -20,7 +20,7 @@ import time,tweepy,csv
 #Eg,
 
 #accesstokenlist=[]
-#accesstokenlist.append('clientid','clientsecret','accesstoken','accesssecret')
+#accesstokenlist.append(['clientid','clientsecret','accesstoken','accesssecret'])
 
 """
 PreCond: Takes in a lst of twitter screennames.
@@ -92,7 +92,7 @@ def extractTweets(lst):
                 
             outtweets = [[lst[i].screen_name,tweet.created_at,tweet.retweet_count,tweet.favorite_count, tweet.text.encode('utf8')] for tweet in tweetlst]
             		
-            with open('%s_tweets.csv' % screen_name, 'w',newline="") as f:
+            with open('%s_tweets.csv' % lst[i], 'w',newline="") as f:
                 writer = csv.writer(f)
                 writer.writerow(["id","created_at","retweet count","favourite count","text"])
                 writer.writerows(outtweets)
