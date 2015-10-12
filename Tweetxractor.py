@@ -4,8 +4,11 @@ Created on Sun Oct 11 12:19:25 2015
 
 Description:
 
-This script enables one with multiple twitter keys to cycle through them, and make repeated API
-requests to extract the tweets of different users into CSV files.
+This script extracts Tweets of different twitter accounts, and makes a CSV of
+--Id / Created at / Retweet count / Fav Count /Tweet--
+for each account.
+
+This script enables you to use multiple twitter API keys to mine information faster.
 
 @author: Thiru
 """
